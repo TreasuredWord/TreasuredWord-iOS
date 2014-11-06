@@ -8,8 +8,13 @@
 
 import Foundation
 
+let pcnBibleVerse = "BibleVerse"
+
 class BibleVerse {
     var reference: String
+//    var book: String
+//    var chapter: Int
+//    var verse: Int
 
     init(reference: String) {
         self.reference = reference

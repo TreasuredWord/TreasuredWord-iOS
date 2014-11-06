@@ -9,9 +9,18 @@
 import Foundation
 
 let nBibleVerseCollectionSaved = "bibleVerseCollectionSaved"
-let pcBibleVerseCollection = "BibleVerseCollection"
+let pcnBibleVerseCollection = "BibleVerseCollection"
 
+//class BibleVerseCollection: PFObject, PFSubclassing {
 class BibleVerseCollection {
+//    override class func load() {
+//        self.registerSubclass()
+//    }
+//
+//    class func parseClassName() -> String! {
+//        return pcnBibleVerseCollection
+//    }
+
     var parseObj: PFObject
 
     var name: String {
@@ -34,10 +43,17 @@ class BibleVerseCollection {
         }
     }
 
+    var isPublic: Bool {
+        get {
+            let isPublic = parseObj["isPublic"] as? Bool ?? false
+            return isPublic
+        }
+    }
+
     var verses = [BibleVerse]()
 
     init() {
-        parseObj = PFObject(className: pcBibleVerseCollection)
+        parseObj = PFObject(className: pcnBibleVerseCollection)
     }
 
     init(parseObj: PFObject) {
@@ -49,7 +65,7 @@ class BibleVerseCollection {
     }
 
     class func retrieveInBackgroundWithBlock(block: ([BibleVerseCollection]) -> Void) {
-        var query = PFQuery(className: pcBibleVerseCollection)
+        var query = PFQuery(className: pcnBibleVerseCollection)
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {

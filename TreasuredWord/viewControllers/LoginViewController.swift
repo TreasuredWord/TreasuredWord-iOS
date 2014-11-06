@@ -22,30 +22,84 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func onSignUp(sender: AnyObject) {
-        var user = PFUser()
-        var email = self.emailField.text
-        var username = email
-        var password = self.passwordField.text
-        user.username = username
-        user.password = password
-        user.email = email
-        // other fields can be set just like with PFObject
-        //        user["phone"] = "415-555-1212"
-        
-        user.signUpInBackgroundWithBlock {
-            (succeeded: Bool!, error: NSError!) -> Void in
-            if error == nil {
-                // Hooray! Let them use the app now.
-                println("Successfully signed up")
-                self.performSegueWithIdentifier("loggedInSegue", sender: self)
+
+    @IBAction func handleLoginWithFacebook(sender: AnyObject) {
+        // Set permissions required from the facebook user account
+        var permissions = [
+            "email",
+            "public_profile",
+            "user_friends",
+//            "user_about_me",
+//            "user_relationships",
+//            "user_birthday",
+//            "user_location",
+        ]
+
+        // Login PFUser using Facebook
+        PFFacebookUtils.logInWithPermissions(permissions, block: {
+            (user: PFUser!, error: NSError?) -> Void in
+//            _activityIndicator.stopAnimating()
+            if user == nil {
+                var errorMessage: String? = nil
+                if (error != nil) {
+                    NSLog("Uh oh. The user cancelled the Facebook login.")
+                    errorMessage = "Uh oh. The user cancelled the Facebook login."
+                } else {
+                    NSLog("Uh oh. An error occurred: \(error)")
+                    errorMessage = error?.localizedDescription
+                }
+                var alert: UIAlertView = UIAlertView(
+                    title: "Log In Error",
+                    message: errorMessage,
+                    delegate: nil,
+                    cancelButtonTitle: "Dismiss"
+                )
+                alert.show()
             } else {
-                let errorString = error.userInfo?["error"] as? NSString
-                // Show the errorString somewhere and let the user try again.
+                if user.isNew {
+                    NSLog("User signed up and logged in through Facebook!")
+                } else {
+                    NSLog("User logged in through Facebook!")
+                }
+                self.performSegueWithIdentifier("loggedInSegue", sender: self)
             }
-        }
+        })
+//        _activityIndicator.startAnimating() // Show loading indicator until login is finished
     }
+
+    func acquireFBPermissions() {
+//        PFFacebookUtils.reauthorizeUser(PFUser.currentUser(), withPublishPermissions:["publish_actions"],
+//            audience:FBSessionDefaultAudienceFriends, {
+//                (succeeded: Bool!, error: NSError!) -> Void in
+//                if succeeded {
+//                    // Your app now has publishing permissions for the user
+//                }
+//        })
+    }
+
+//        @IBAction func onSignUp(sender: AnyObject) {
+//        var user = PFUser()
+//        var email = self.emailField.text
+//        var username = email
+//        var password = self.passwordField.text
+//        user.username = username
+//        user.password = password
+//        user.email = email
+//        // other fields can be set just like with PFObject
+//        //        user["phone"] = "415-555-1212"
+
+//        user.signUpInBackgroundWithBlock {
+//            (succeeded: Bool!, error: NSError!) -> Void in
+//            if error == nil {
+//                // Hooray! Let them use the app now.
+//                println("Successfully signed up")
+//                self.performSegueWithIdentifier("loggedInSegue", sender: self)
+//            } else {
+//                let errorString = error.userInfo?["error"] as? NSString
+//                // Show the errorString somewhere and let the user try again.
+//            }
+//        }
+//    }
     
     @IBAction func onSignIn(sender: AnyObject) {
         var email = self.emailField.text

@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let PARSE_APPLICATION_ID = NSBundle.mainBundle().objectForInfoDictionaryKey("PARSE_APPLICATION_ID") as? String
         let PARSE_CLIENT_KEY = NSBundle.mainBundle().objectForInfoDictionaryKey("PARSE_CLIENT_KEY") as? String
         Parse.setApplicationId(PARSE_APPLICATION_ID, clientKey: PARSE_CLIENT_KEY)
+        PFFacebookUtils.initializeFacebook()
         return true
     }
 
@@ -38,12 +39,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        FBAppEvents.activateApp()
+        FBAppCall.handleDidBecomeActiveWithSession(PFFacebookUtils.session())
     }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        PFFacebookUtils.session().close()
     }
 
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        var handler = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication, withSession: PFFacebookUtils.session())
+        return handler
+    }
 
 }
 

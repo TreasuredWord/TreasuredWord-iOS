@@ -22,7 +22,6 @@ class BibleVerseCollectionTableViewCell: UITableViewCell {
         }
 
         didSet(oldValue) {
-            
         }
     }
 }

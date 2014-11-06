@@ -69,7 +69,9 @@ class BibleVerseCollectionViewController: UIViewController, UICollectionViewDele
     }
 
     @IBAction func onEdit(sender: UIBarButtonItem) {
-        self.performSegueWithIdentifier("com.treasuredword.verseCollection.editSegue", sender: self)
+        if !bibleVerseCollection.isPublic {
+            self.performSegueWithIdentifier("com.treasuredword.verseCollection.editSegue", sender: self)
+        }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
