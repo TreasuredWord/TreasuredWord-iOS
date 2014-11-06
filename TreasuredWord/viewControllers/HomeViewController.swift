@@ -14,6 +14,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     var refreshControl: UIRefreshControl?
     var bibleVerseCollections = [BibleVerseCollection]()
+    var myBibleVerseCollections: [BibleVerseCollection]!
+    var publicBibleVerseCollections: [BibleVerseCollection]!
     var activeBibleVerseCollection: BibleVerseCollection!
 
     override func viewDidLoad() {
@@ -54,6 +56,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
             if !alreadyExists {
                 self.bibleVerseCollections.append(bibleVerseCollection)
+                self.myBibleVerseCollections.append(bibleVerseCollection)
             }
         }
         self.tableView.reloadData()
@@ -70,24 +73,58 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             (bibleVerseCollections: [BibleVerseCollection]) -> Void in
             self.refreshControl?.endRefreshing()
             self.bibleVerseCollections = bibleVerseCollections
+            self.myBibleVerseCollections = bibleVerseCollections.filter({
+                (includeElement: BibleVerseCollection) -> Bool in
+                return includeElement.isEditableByCurrentUser()
+            })
+            self.publicBibleVerseCollections = bibleVerseCollections.filter({
+                (includeElement: BibleVerseCollection) -> Bool in
+                return !includeElement.isEditableByCurrentUser()
+            })
             self.tableView.reloadData()
         }
     }
 
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
+
+    func getBibleVerseCollectionForIndexPath(indexPath: NSIndexPath) -> BibleVerseCollection {
+        var section = indexPath.section
+        var bibleVerseCollection = section == 0 ? myBibleVerseCollections![indexPath.row] : publicBibleVerseCollections![indexPath.row]
+        return bibleVerseCollection
+    }
+
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let SECTION_HEADER_HEIGHT = 20
+        var sectionName = section == 0 ? "My Verse Collections" : "Public Verse Collections"
+
+        var headerView = UIView(frame: CGRect(x: 0, y:0, width: 320, height: SECTION_HEADER_HEIGHT))
+        headerView.backgroundColor = UIColor(white: 0.8, alpha: 0.8)
+
+        var headerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 320, height: SECTION_HEADER_HEIGHT))
+        headerLabel.text = "     \(sectionName)"
+
+        headerView.addSubview(headerLabel)
+
+        return headerView
+    }
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bibleVerseCollections.count
+        var result = (section == 0 ? myBibleVerseCollections?.count : publicBibleVerseCollections?.count) ?? 0
+        return result
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("bibleVerseCollectionTableViewCell") as BibleVerseCollectionTableViewCell
-        var bibleVerseCollection = bibleVerseCollections[indexPath.row]
+        var bibleVerseCollection = getBibleVerseCollectionForIndexPath(indexPath)
         cell.bibleVerseCollection = bibleVerseCollection
         return cell
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        var bibleVerseCollection = bibleVerseCollections[indexPath.row]
+        var bibleVerseCollection = getBibleVerseCollectionForIndexPath(indexPath)
         activeBibleVerseCollection = bibleVerseCollection
         self.performSegueWithIdentifier("com.treasuredword.home.viewVerseCollectionSegue", sender: self)
     }

@@ -43,10 +43,10 @@ class BibleVerseCollection {
         }
     }
 
-    var isPublic: Bool {
+    var curator: PFUser {
         get {
-            let isPublic = parseObj["isPublic"] as? Bool ?? false
-            return isPublic
+            let user = parseObj["curator"] as PFUser
+            return user
         }
     }
 
@@ -54,6 +54,11 @@ class BibleVerseCollection {
 
     init() {
         parseObj = PFObject(className: pcnBibleVerseCollection)
+        var acl = PFACL(user: PFUser.currentUser())
+        acl.setPublicReadAccess(true)
+        parseObj.ACL = acl
+        parseObj["curator"] = PFUser.currentUser()
+//        parseObj.saveEventually()
     }
 
     init(parseObj: PFObject) {
@@ -100,6 +105,11 @@ class BibleVerseCollection {
     func getId() -> String? {
         var parseId = self.parseObj.objectId?
         return parseId
+    }
+
+    func isEditableByCurrentUser() -> Bool {
+        var result = self.curator.objectId == PFUser.currentUser().objectId
+        return result
     }
 
     func addVerseWithReference(reference: String) {

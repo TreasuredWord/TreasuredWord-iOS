@@ -20,6 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId(PARSE_APPLICATION_ID, clientKey: PARSE_CLIENT_KEY)
         PFFacebookUtils.initializeFacebook()
 
+        PFUser.enableAutomaticUser()
+        var defaultACL = PFACL()
+        // Optionally enable public read access while disabling public write access.
+        // defaultACL.setPublicReadAccess(true)
+        PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser:true)
+
+        PFUser.currentUser().incrementKey("runCount")
+        PFUser.currentUser().saveEventually()
+
         window?.rootViewController = TreasuredWordUtils.getLoginViewController()
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDidLogout:", name: "didLogoutNotification", object: nil)
