@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: PFLogInViewController, PFLogInViewControllerDelegate {
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -16,11 +16,27 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        var logo = UILabel()
+        logo.text = "TreasuredWord"
+        logo.font = UIFont(name: "System Bold", size: 20)
+//        view.backgroundColor = UIColor.whiteColor()
+        self.logInView.logo = logo
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    func logInViewController(controller: PFLogInViewController, didLogInUser user: PFUser) -> Void {
+        NSLog("didLogInUser")
+//        self.dismissViewController(true, completion: nil)
+        self.performSegueWithIdentifier("loggedInSegue", sender: self)
+    }
+
+    func logInViewControllerDidCancelLogIn(controller: PFLogInViewController) -> Void {
+        NSLog("logInViewControllerDidCancelLogIn")
+//        self.dismisViewControllerAnimated(true, completion: nil)
     }
 
     @IBAction func handleLoginWithFacebook(sender: AnyObject) {

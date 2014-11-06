@@ -38,6 +38,7 @@
 		56D667551A0B485B00D77D75 /* HTKLocationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D667411A0B485B00D77D75 /* HTKLocationUtils.swift */; };
 		56D667561A0B485B00D77D75 /* HTKNotificationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D667421A0B485B00D77D75 /* HTKNotificationUtils.swift */; };
 		56D667571A0B485B00D77D75 /* HTKUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D667431A0B485B00D77D75 /* HTKUtils.swift */; };
+		56D6675A1A0B536C00D77D75 /* TreasuredWordUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D667591A0B536C00D77D75 /* TreasuredWordUtils.swift */; };
 		56E0830219D714C10099A356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E0830119D714C10099A356 /* AppDelegate.swift */; };
 		56E0830719D714C10099A356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E0830519D714C10099A356 /* Main.storyboard */; };
 		56E0830919D714C10099A356 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56E0830819D714C10099A356 /* Images.xcassets */; };
@@ -90,6 +91,7 @@
 		56D667411A0B485B00D77D75 /* HTKLocationUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTKLocationUtils.swift; sourceTree = "<group>"; };
 		56D667421A0B485B00D77D75 /* HTKNotificationUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTKNotificationUtils.swift; sourceTree = "<group>"; };
 		56D667431A0B485B00D77D75 /* HTKUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTKUtils.swift; sourceTree = "<group>"; };
+		56D667591A0B536C00D77D75 /* TreasuredWordUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreasuredWordUtils.swift; path = utils/TreasuredWordUtils.swift; sourceTree = "<group>"; };
 		56E082FC19D714C10099A356 /* TreasuredWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreasuredWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E0830019D714C10099A356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56E0830119D714C10099A356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -277,6 +279,14 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		56D667581A0B535300D77D75 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				56D667591A0B536C00D77D75 /* TreasuredWordUtils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		56E082F319D714C10099A356 = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				566460181A084D9600A0B92E /* Models */,
+				56D667581A0B535300D77D75 /* Utils */,
 				5664601B1A084DF300A0B92E /* Views */,
 				5664600E1A08477100A0B92E /* View Controllers */,
 				56E0830119D714C10099A356 /* AppDelegate.swift */,
@@ -515,6 +526,7 @@
 				56E0830219D714C10099A356 /* AppDelegate.swift in Sources */,
 				56D667571A0B485B00D77D75 /* HTKUtils.swift in Sources */,
 				563B95331A09608200486F41 /* BibleVerseCollectionViewCell.swift in Sources */,
+				56D6675A1A0B536C00D77D75 /* TreasuredWordUtils.swift in Sources */,
 				56D667501A0B485B00D77D75 /* TwitterClient.swift in Sources */,
 				56D667441A0B485B00D77D75 /* DataStructures.swift in Sources */,
 				56D6674F1A0B485B00D77D75 /* TwitterUser.swift in Sources */,

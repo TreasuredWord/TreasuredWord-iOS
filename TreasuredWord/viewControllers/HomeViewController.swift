@@ -92,6 +92,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.performSegueWithIdentifier("com.treasuredword.home.viewVerseCollectionSegue", sender: self)
     }
 
+    @IBAction func onLogOut(sender: AnyObject) {
+        PFUser.logOut()
+        println ("logout pressed")
+        NSNotificationCenter.defaultCenter().postNotificationName("didLogoutNotification", object: nil)
+    }
+
     @IBAction func onCreate(sender: UIBarButtonItem) {
         self.performSegueWithIdentifier("com.treasuredword.home.createVerseCollectionSegue", sender: self)
     }

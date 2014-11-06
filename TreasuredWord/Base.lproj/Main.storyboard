@@ -154,6 +154,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="mfV-lV-SIJ">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="cA0-DU-bgh">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wQE-Um-wyz">
+                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLogOut:" destination="Bld-bX-p9m" eventType="touchUpInside" id="dXT-QI-dLe"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Create" id="AJ8-hQ-KrJ">
                             <connections>
                                 <action selector="onCreate:" destination="Bld-bX-p9m" id="145-mS-kP4"/>

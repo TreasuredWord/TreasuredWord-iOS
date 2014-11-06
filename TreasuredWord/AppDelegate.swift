@@ -20,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId(PARSE_APPLICATION_ID, clientKey: PARSE_CLIENT_KEY)
         PFFacebookUtils.initializeFacebook()
 
+        window?.rootViewController = TreasuredWordUtils.getLoginViewController()
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDidLogout:", name: "didLogoutNotification", object: nil)
+
         if PFUser.currentUser() != nil && // Check if user is cached
             PFFacebookUtils.isLinkedWithUser(PFUser.currentUser()) { // Check if user is linked to Facebook
                 // Present the next view controller without animation
@@ -28,6 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 window?.rootViewController = vc
         }
         return true
+    }
+
+    func userDidLogout(notification: NSNotification) {
+//        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        var vc = storyboard.instantiateInitialViewController() as UIViewController
+        window?.rootViewController = TreasuredWordUtils.getLoginViewController()
     }
 
     func applicationWillResignActive(application: UIApplication) {
