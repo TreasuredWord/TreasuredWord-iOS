@@ -10,9 +10,11 @@ This is the iOS client for [TreasuredWord](https://github.com/TreasuredWord)
   * `sudo gem install cocoapods`
 * Install Pods
   * `pod install`
+* Update/initialize the [hacktoolkit-ios_lib](https://github.com/hacktoolkit/hacktoolkit-ios_lib) submodule (temporary step until CocoaPods supports Swift source files natively)
+  * `git submodule update --init` (subsequent update don't need the `--init` flag)
 * Set up API keys
   * Create a `secrets.xcconfig` config file based on `secrets.xcconfig.template`
-  * Obtain API keys from Parse and add the keys to `secrets.xcconfig`
+  * Obtain API keys from Parse, Facebook, etc. and add the keys to `secrets.xcconfig`
 * Run it!
 
 ## Features
@@ -40,3 +42,9 @@ Here's an animated GIF (made with [LiceCAP](http://www.cockos.com/licecap/)) of 
 ## License
 
 * `TreasuredWord-iOS` is licensed under MIT. See `LICENSE`
+* hacktoolkit-ios_lib` is licensed under MIT
+  * Full details: <http://hacktoolkit.com>
+* The Font Awesome font is licensed under the SIL OFL 1.1:
+  * <http://scripts.sil.org/OFL>
+* Font Awesome by Dave Gandy - <http://fontawesome.io>
+  * Full details: <http://fontawesome.io/license>
