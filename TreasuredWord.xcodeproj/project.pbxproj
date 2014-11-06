@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		563B952F1A08B7E300486F41 /* MemoryVerseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563B952E1A08B7E300486F41 /* MemoryVerseTableViewCell.swift */; };
-		563B95311A08C86000486F41 /* MemoryVerseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563B95301A08C86000486F41 /* MemoryVerseCollectionViewController.swift */; };
-		563B95331A09608200486F41 /* MemoryVerseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563B95321A09608200486F41 /* MemoryVerseCollectionViewCell.swift */; };
-		563B95351A0966D700486F41 /* MemoryVerseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563B95341A0966D700486F41 /* MemoryVerseViewController.swift */; };
-		563B95371A09674B00486F41 /* MemoryVerse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563B95361A09674B00486F41 /* MemoryVerse.swift */; };
+		563B952F1A08B7E300486F41 /* BibleVerseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563B952E1A08B7E300486F41 /* BibleVerseTableViewCell.swift */; };
+		563B95311A08C86000486F41 /* BibleVerseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563B95301A08C86000486F41 /* BibleVerseCollectionViewController.swift */; };
+		563B95331A09608200486F41 /* BibleVerseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563B95321A09608200486F41 /* BibleVerseCollectionViewCell.swift */; };
+		563B95351A0966D700486F41 /* BibleVerseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563B95341A0966D700486F41 /* BibleVerseViewController.swift */; };
+		563B95371A09674B00486F41 /* BibleVerse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563B95361A09674B00486F41 /* BibleVerse.swift */; };
 		566460101A08478D00A0B92E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5664600F1A08478D00A0B92E /* LoginViewController.swift */; };
 		566460121A084A1A00A0B92E /* secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 566460111A084A1A00A0B92E /* secrets.xcconfig */; };
 		566460171A084CC500A0B92E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566460161A084CC500A0B92E /* HomeViewController.swift */; };
-		5664601A1A084DC000A0B92E /* MemoryVerseCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566460191A084DC000A0B92E /* MemoryVerseCollection.swift */; };
-		5664601D1A084E2C00A0B92E /* MemoryVerseCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5664601C1A084E2C00A0B92E /* MemoryVerseCollectionTableViewCell.swift */; };
-		5664601F1A08500100A0B92E /* EditMemoryVerseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5664601E1A08500100A0B92E /* EditMemoryVerseCollectionViewController.swift */; };
+		5664601A1A084DC000A0B92E /* BibleVerseCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566460191A084DC000A0B92E /* BibleVerseCollection.swift */; };
+		5664601D1A084E2C00A0B92E /* BibleVerseCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5664601C1A084E2C00A0B92E /* BibleVerseCollectionTableViewCell.swift */; };
+		5664601F1A08500100A0B92E /* EditBibleVerseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5664601E1A08500100A0B92E /* EditBibleVerseCollectionViewController.swift */; };
 		56E0830219D714C10099A356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E0830119D714C10099A356 /* AppDelegate.swift */; };
 		56E0830719D714C10099A356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E0830519D714C10099A356 /* Main.storyboard */; };
 		56E0830919D714C10099A356 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56E0830819D714C10099A356 /* Images.xcassets */; };
@@ -38,18 +38,18 @@
 
 /* Begin PBXFileReference section */
 		01BF8F6C9906C63157522075 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		563B952E1A08B7E300486F41 /* MemoryVerseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoryVerseTableViewCell.swift; path = views/MemoryVerseTableViewCell.swift; sourceTree = "<group>"; };
-		563B95301A08C86000486F41 /* MemoryVerseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoryVerseCollectionViewController.swift; path = viewControllers/MemoryVerseCollectionViewController.swift; sourceTree = "<group>"; };
-		563B95321A09608200486F41 /* MemoryVerseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoryVerseCollectionViewCell.swift; path = views/MemoryVerseCollectionViewCell.swift; sourceTree = "<group>"; };
-		563B95341A0966D700486F41 /* MemoryVerseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoryVerseViewController.swift; path = viewControllers/MemoryVerseViewController.swift; sourceTree = "<group>"; };
-		563B95361A09674B00486F41 /* MemoryVerse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoryVerse.swift; path = models/MemoryVerse.swift; sourceTree = "<group>"; };
+		563B952E1A08B7E300486F41 /* BibleVerseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BibleVerseTableViewCell.swift; path = views/BibleVerseTableViewCell.swift; sourceTree = "<group>"; };
+		563B95301A08C86000486F41 /* BibleVerseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BibleVerseCollectionViewController.swift; path = viewControllers/BibleVerseCollectionViewController.swift; sourceTree = "<group>"; };
+		563B95321A09608200486F41 /* BibleVerseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BibleVerseCollectionViewCell.swift; path = views/BibleVerseCollectionViewCell.swift; sourceTree = "<group>"; };
+		563B95341A0966D700486F41 /* BibleVerseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BibleVerseViewController.swift; path = viewControllers/BibleVerseViewController.swift; sourceTree = "<group>"; };
+		563B95361A09674B00486F41 /* BibleVerse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BibleVerse.swift; path = models/BibleVerse.swift; sourceTree = "<group>"; };
 		5664600F1A08478D00A0B92E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = viewControllers/LoginViewController.swift; sourceTree = "<group>"; };
 		566460111A084A1A00A0B92E /* secrets.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = secrets.xcconfig; sourceTree = SOURCE_ROOT; };
 		566460131A084A4800A0B92E /* TreasuredWord-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TreasuredWord-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		566460161A084CC500A0B92E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = viewControllers/HomeViewController.swift; sourceTree = "<group>"; };
-		566460191A084DC000A0B92E /* MemoryVerseCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoryVerseCollection.swift; path = models/MemoryVerseCollection.swift; sourceTree = "<group>"; };
-		5664601C1A084E2C00A0B92E /* MemoryVerseCollectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoryVerseCollectionTableViewCell.swift; path = views/MemoryVerseCollectionTableViewCell.swift; sourceTree = "<group>"; };
-		5664601E1A08500100A0B92E /* EditMemoryVerseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditMemoryVerseCollectionViewController.swift; path = viewControllers/EditMemoryVerseCollectionViewController.swift; sourceTree = "<group>"; };
+		566460191A084DC000A0B92E /* BibleVerseCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BibleVerseCollection.swift; path = models/BibleVerseCollection.swift; sourceTree = "<group>"; };
+		5664601C1A084E2C00A0B92E /* BibleVerseCollectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BibleVerseCollectionTableViewCell.swift; path = views/BibleVerseCollectionTableViewCell.swift; sourceTree = "<group>"; };
+		5664601E1A08500100A0B92E /* EditBibleVerseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditBibleVerseCollectionViewController.swift; path = viewControllers/EditBibleVerseCollectionViewController.swift; sourceTree = "<group>"; };
 		56E082FC19D714C10099A356 /* TreasuredWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreasuredWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E0830019D714C10099A356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56E0830119D714C10099A356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,9 +87,9 @@
 			children = (
 				5664600F1A08478D00A0B92E /* LoginViewController.swift */,
 				566460161A084CC500A0B92E /* HomeViewController.swift */,
-				5664601E1A08500100A0B92E /* EditMemoryVerseCollectionViewController.swift */,
-				563B95301A08C86000486F41 /* MemoryVerseCollectionViewController.swift */,
-				563B95341A0966D700486F41 /* MemoryVerseViewController.swift */,
+				5664601E1A08500100A0B92E /* EditBibleVerseCollectionViewController.swift */,
+				563B95301A08C86000486F41 /* BibleVerseCollectionViewController.swift */,
+				563B95341A0966D700486F41 /* BibleVerseViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -97,8 +97,8 @@
 		566460181A084D9600A0B92E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				566460191A084DC000A0B92E /* MemoryVerseCollection.swift */,
-				563B95361A09674B00486F41 /* MemoryVerse.swift */,
+				566460191A084DC000A0B92E /* BibleVerseCollection.swift */,
+				563B95361A09674B00486F41 /* BibleVerse.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -106,9 +106,9 @@
 		5664601B1A084DF300A0B92E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5664601C1A084E2C00A0B92E /* MemoryVerseCollectionTableViewCell.swift */,
-				563B952E1A08B7E300486F41 /* MemoryVerseTableViewCell.swift */,
-				563B95321A09608200486F41 /* MemoryVerseCollectionViewCell.swift */,
+				5664601C1A084E2C00A0B92E /* BibleVerseCollectionTableViewCell.swift */,
+				563B952E1A08B7E300486F41 /* BibleVerseTableViewCell.swift */,
+				563B95321A09608200486F41 /* BibleVerseCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -328,17 +328,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5664601A1A084DC000A0B92E /* MemoryVerseCollection.swift in Sources */,
-				5664601D1A084E2C00A0B92E /* MemoryVerseCollectionTableViewCell.swift in Sources */,
+				5664601A1A084DC000A0B92E /* BibleVerseCollection.swift in Sources */,
+				5664601D1A084E2C00A0B92E /* BibleVerseCollectionTableViewCell.swift in Sources */,
 				566460101A08478D00A0B92E /* LoginViewController.swift in Sources */,
-				563B952F1A08B7E300486F41 /* MemoryVerseTableViewCell.swift in Sources */,
-				5664601F1A08500100A0B92E /* EditMemoryVerseCollectionViewController.swift in Sources */,
-				563B95351A0966D700486F41 /* MemoryVerseViewController.swift in Sources */,
-				563B95311A08C86000486F41 /* MemoryVerseCollectionViewController.swift in Sources */,
+				563B952F1A08B7E300486F41 /* BibleVerseTableViewCell.swift in Sources */,
+				5664601F1A08500100A0B92E /* EditBibleVerseCollectionViewController.swift in Sources */,
+				563B95351A0966D700486F41 /* BibleVerseViewController.swift in Sources */,
+				563B95311A08C86000486F41 /* BibleVerseCollectionViewController.swift in Sources */,
 				56E0830219D714C10099A356 /* AppDelegate.swift in Sources */,
-				563B95331A09608200486F41 /* MemoryVerseCollectionViewCell.swift in Sources */,
+				563B95331A09608200486F41 /* BibleVerseCollectionViewCell.swift in Sources */,
 				566460171A084CC500A0B92E /* HomeViewController.swift in Sources */,
-				563B95371A09674B00486F41 /* MemoryVerse.swift in Sources */,
+				563B95371A09674B00486F41 /* BibleVerse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

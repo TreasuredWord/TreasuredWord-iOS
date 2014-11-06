@@ -1,5 +1,5 @@
 //
-//  MemoryVerse.swift
+//  BibleVerse.swift
 //  TreasuredWord
 //
 //  Created by Jonathan Tsai on 11/4/14.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-class MemoryVerse {
-    var verseReference: String
+class BibleVerse {
+    var reference: String
 
-    init(verseReference: String) {
-        self.verseReference = verseReference
+    init(reference: String) {
+        self.reference = reference
     }
 
     func getText() -> String {

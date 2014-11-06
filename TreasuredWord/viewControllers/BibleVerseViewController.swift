@@ -1,5 +1,5 @@
 //
-//  MemoryVerseViewController.swift
+//  BibleVerseViewController.swift
 //  TreasuredWord
 //
 //  Created by Jonathan Tsai on 11/4/14.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-class MemoryVerseViewController: UIViewController {
+class BibleVerseViewController: UIViewController {
 
     @IBOutlet weak private var verseLabel: UILabel!
     @IBOutlet weak private var verseTextLabel: UILabel!
 
-    var verse: MemoryVerse! {
+    var verse: BibleVerse! {
         willSet(newValue) {
-            verseLabel.text = newValue.verseReference
+            verseLabel.text = newValue.reference
             verseTextLabel.text = newValue.getText()
-            self.navigationItem.title = newValue.verseReference
+            self.navigationItem.title = newValue.reference
         }
 
         didSet(oldValue) {

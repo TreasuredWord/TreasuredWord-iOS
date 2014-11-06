@@ -1,5 +1,5 @@
 //
-//  MemoryVerseCollectionViewCell.swift
+//  BibleVerseCollectionViewCell.swift
 //  TreasuredWord
 //
 //  Created by Jonathan Tsai on 11/4/14.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class MemoryVerseCollectionViewCell: UICollectionViewCell {
+class BibleVerseCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak private var verseLabel: UILabel!
 
-    var verse: String! {
+    var verse: BibleVerse! {
         willSet(newValue) {
-            verseLabel.text = newValue
+            verseLabel.text = newValue.reference
         }
 
         didSet(oldValue) {

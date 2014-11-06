@@ -1,5 +1,5 @@
 //
-//  MemoryVerseCollectionTableViewCell.swift
+//  BibleVerseCollectionTableViewCell.swift
 //  TreasuredWord
 //
 //  Created by Jonathan Tsai on 11/3/14.
@@ -8,15 +8,17 @@
 
 import UIKit
 
-class MemoryVerseCollectionCell: UITableViewCell {
+class BibleVerseCollectionTableViewCell: UITableViewCell {
 
     @IBOutlet weak private var collectionNameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak private var versesLabel: UILabel!
 
-    var memoryVerseCollection: MemoryVerseCollection! {
+    var bibleVerseCollection: BibleVerseCollection! {
         willSet(newValue) {
             collectionNameLabel.text = newValue.name
-            versesLabel.text = "; ".join(newValue.verses)
+            descriptionLabel.text = newValue.description
+            versesLabel.text = "; ".join(newValue.getVerseReferences())
         }
 
         didSet(oldValue) {

@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4x5-OM-JBm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4x5-OM-JBm">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="9ir-cU-586">
             <objects>
                 <viewController id="XUM-1V-ish" customClass="LoginViewController" customModule="TreasuredWord" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aGe-t7-7uA"/>
+                        <viewControllerLayoutGuide type="bottom" id="EcX-fl-FTm"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jy2-g1-UBm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HyJ-Qi-Xh9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyJ-Qi-Xh9">
                                 <rect key="frame" x="16" y="92" width="58" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tqp-kk-7Yi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqp-kk-7Yi">
                                 <rect key="frame" x="16" y="159" width="76" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="NdR-u9-7je">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NdR-u9-7je">
                                 <rect key="frame" x="12" y="188" width="292" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GQb-SP-qMA">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQb-SP-qMA">
                                 <rect key="frame" x="60" y="241" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -42,15 +43,13 @@
                                     <action selector="onSignUp:" destination="XUM-1V-ish" eventType="touchUpInside" id="Gx5-cz-Zhc"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="cye-3o-kW4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cye-3o-kW4">
                                 <rect key="frame" x="12" y="121" width="292" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zhn-fG-9hk">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhn-fG-9hk">
                                 <rect key="frame" x="193" y="241" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -64,50 +63,69 @@
                     <connections>
                         <outlet property="emailField" destination="cye-3o-kW4" id="1mg-Bm-MXo"/>
                         <outlet property="passwordField" destination="NdR-u9-7je" id="Fag-nK-qCU"/>
-                        <segue destination="4x5-OM-JBm" kind="modal" identifier="loggedInSegue" id="J3Y-X7-VkF"/>
+                        <segue destination="4x5-OM-JBm" kind="presentation" identifier="loggedInSegue" id="J3Y-X7-VkF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPU-SQ-iZX" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3728" y="-677"/>
+            <point key="canvasLocation" x="-6990" y="-715.14084507042253"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="lRb-3M-vaN">
             <objects>
                 <viewController id="Bld-bX-p9m" userLabel="Home View Controller" customClass="HomeViewController" customModule="TreasuredWord" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U8d-MK-rJc"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Pa-cd-aD2"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="J1V-8T-Moh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="78" sectionHeaderHeight="22" sectionFooterHeight="22" id="ih4-hK-Tsa">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ih4-hK-Tsa">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="memoryVerseCollectionCell" rowHeight="78" id="Lu2-RL-NLQ" customClass="MemoryVerseCollectionCell" customModule="TreasuredWord" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bibleVerseCollectionTableViewCell" id="Lu2-RL-NLQ" customClass="BibleVerseCollectionTableViewCell" customModule="TreasuredWord" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lu2-RL-NLQ" id="FYf-GU-oC1">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ylk-y1-bkQ">
-                                                    <rect key="frame" x="23" y="13" width="127" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="Financial Stewardship" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylk-y1-bkQ">
+                                                    <rect key="frame" x="10" y="10" width="355" height="33"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John 3:16; Romans 3:23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h8f-q9-Ua2">
-                                                    <rect key="frame" x="23" y="42" width="188" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Stuff about Financial stewardship" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWG-Wq-nsc">
+                                                    <rect key="frame" x="375" y="10" width="215" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John 3:16; Romans 3:23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8f-q9-Ua2">
+                                                    <rect key="frame" x="10" y="48" width="580" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="h8f-q9-Ua2" secondAttribute="trailing" constant="10" id="9af-1Y-sLZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="QWG-Wq-nsc" secondAttribute="trailing" constant="10" id="BPU-MC-yr6"/>
+                                                <constraint firstItem="ylk-y1-bkQ" firstAttribute="leading" secondItem="FYf-GU-oC1" secondAttribute="leading" constant="10" id="H4t-t9-Kxc"/>
+                                                <constraint firstItem="QWG-Wq-nsc" firstAttribute="leading" secondItem="ylk-y1-bkQ" secondAttribute="trailing" constant="10" id="YNY-Ie-8Sx"/>
+                                                <constraint firstItem="h8f-q9-Ua2" firstAttribute="leading" secondItem="FYf-GU-oC1" secondAttribute="leading" constant="10" id="ad2-GO-NKv"/>
+                                                <constraint firstItem="QWG-Wq-nsc" firstAttribute="top" secondItem="FYf-GU-oC1" secondAttribute="top" constant="10" id="cMv-HP-a4Q"/>
+                                                <constraint firstItem="ylk-y1-bkQ" firstAttribute="top" secondItem="FYf-GU-oC1" secondAttribute="top" constant="10" id="dAN-Wa-73m"/>
+                                                <constraint firstItem="h8f-q9-Ua2" firstAttribute="top" secondItem="ylk-y1-bkQ" secondAttribute="bottom" constant="5" id="eu0-r1-xdu"/>
+                                                <constraint firstAttribute="bottom" secondItem="h8f-q9-Ua2" secondAttribute="bottom" constant="10" id="sOB-DK-SQU"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="collectionNameLabel" destination="ylk-y1-bkQ" id="WNc-dA-ME8"/>
+                                            <outlet property="descriptionLabel" destination="QWG-Wq-nsc" id="W98-av-JZ4"/>
                                             <outlet property="versesLabel" destination="h8f-q9-Ua2" id="sXC-8H-yP3"/>
                                         </connections>
                                     </tableViewCell>
@@ -119,6 +137,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ih4-hK-Tsa" firstAttribute="top" secondItem="U8d-MK-rJc" secondAttribute="bottom" id="ZHh-2m-GWX"/>
+                            <constraint firstAttribute="trailing" secondItem="ih4-hK-Tsa" secondAttribute="trailing" id="cV2-KO-Pft"/>
+                            <constraint firstItem="3Pa-cd-aD2" firstAttribute="top" secondItem="ih4-hK-Tsa" secondAttribute="bottom" id="dZT-34-RRG"/>
+                            <constraint firstItem="ih4-hK-Tsa" firstAttribute="leading" secondItem="J1V-8T-Moh" secondAttribute="leading" id="fbk-zT-wiJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="mfV-lV-SIJ">
                         <barButtonItem key="rightBarButtonItem" title="Create" id="AJ8-hQ-KrJ">
@@ -129,69 +153,94 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ih4-hK-Tsa" id="Qj5-3z-zZE"/>
-                        <segue destination="rLL-mK-F44" kind="push" identifier="createVerseCollectionSegue" id="cti-J4-b9N"/>
-                        <segue destination="rEA-cs-51g" kind="push" identifier="viewVerseCollectionSegue" id="IgG-BP-gXj"/>
+                        <segue destination="rLL-mK-F44" kind="show" identifier="com.treasuredword.home.createVerseCollectionSegue" id="cti-J4-b9N"/>
+                        <segue destination="rEA-cs-51g" kind="show" identifier="com.treasuredword.home.viewVerseCollectionSegue" id="IgG-BP-gXj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFc-xB-bHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2607" y="-667"/>
+            <point key="canvasLocation" x="-5317" y="-735"/>
         </scene>
-        <!--Edit Memory Verse Collection View Controller-->
+        <!--Edit Bible Verse Collection View Controller-->
         <scene sceneID="yF5-3E-1h8">
             <objects>
-                <viewController storyboardIdentifier="EditMemoryVerseCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rLL-mK-F44" userLabel="Edit Memory Verse Collection View Controller" customClass="EditMemoryVerseCollectionViewController" customModule="TreasuredWord" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditMemoryVerseCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rLL-mK-F44" userLabel="Edit Bible Verse Collection View Controller" customClass="EditBibleVerseCollectionViewController" customModule="TreasuredWord" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SyI-QP-b6L"/>
+                        <viewControllerLayoutGuide type="bottom" id="oPH-E4-M3U"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sLw-iq-p05">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hxt-UB-NsZ">
-                                <rect key="frame" x="16" y="91" width="46" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxt-UB-NsZ">
+                                <rect key="frame" x="10" y="74" width="44" height="20"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="lkb-Mt-WAt">
-                                <rect key="frame" x="87" y="87" width="186" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lkb-Mt-WAt">
+                                <rect key="frame" x="10" y="99" width="580" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="onNameChanged:" destination="rLL-mK-F44" eventType="editingChanged" id="LV1-78-LrS"/>
+                                    <action selector="onTextFieldEditingChanged:" destination="rLL-mK-F44" eventType="editingChanged" id="dcN-FN-SgG"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Verse" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fHp-5v-5Vg">
-                                <rect key="frame" x="16" y="134" width="93" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6h-Xp-1o0">
+                                <rect key="frame" x="10" y="139" width="86" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Verse" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHp-5v-5Vg">
+                                <rect key="frame" x="10" y="204" width="89" height="20"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="PMF-t2-ibQ">
-                                <rect key="frame" x="16" y="169" width="245" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PMF-t2-ibQ">
+                                <rect key="frame" x="26" y="229" width="564" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="22" sectionFooterHeight="22" id="N3m-ys-zex">
-                                <rect key="frame" x="16" y="253" width="288" height="284"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaT-aM-fpU">
+                                <rect key="frame" x="109" y="199" width="30" height="30"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAdded:" destination="rLL-mK-F44" eventType="touchUpInside" id="Ckv-9D-aOy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verses" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vg1-Qh-U0f">
+                                <rect key="frame" x="10" y="269" width="50" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="N3m-ys-zex">
+                                <rect key="frame" x="10" y="294" width="580" height="296"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="memoryVerseCell" rowHeight="45" id="yf5-fh-XI5" customClass="MemoryVerseCell" customModule="TreasuredWord" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bibleVerseTableViewCell" rowHeight="45" id="yf5-fh-XI5" customClass="BibleVerseTableViewCell" customModule="TreasuredWord" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yf5-fh-XI5" id="Jzp-nG-No4">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John 3:16" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ipf-DT-gh4">
-                                                    <rect key="frame" x="14" y="12" width="76" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John 3:16" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ipf-DT-gh4">
+                                                    <rect key="frame" x="10" y="10" width="560" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Ipf-DT-gh4" secondAttribute="bottom" constant="10" id="FrE-9m-eXN"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ipf-DT-gh4" secondAttribute="trailing" constant="10" id="fSJ-Od-LjO"/>
+                                                <constraint firstItem="Ipf-DT-gh4" firstAttribute="top" secondItem="Jzp-nG-No4" secondAttribute="top" constant="10" id="iD6-LY-IXc"/>
+                                                <constraint firstItem="Ipf-DT-gh4" firstAttribute="leading" secondItem="Jzp-nG-No4" secondAttribute="leading" constant="10" id="ygW-Ir-9pX"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="verseLabel" destination="Ipf-DT-gh4" id="iuX-B3-WTD"/>
@@ -203,64 +252,105 @@
                                     <outlet property="delegate" destination="rLL-mK-F44" id="ZZh-zy-rej"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verses" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vg1-Qh-U0f">
-                                <rect key="frame" x="16" y="229" width="51" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oaT-aM-fpU">
-                                <rect key="frame" x="274" y="169" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sLo-h2-pOR">
+                                <rect key="frame" x="10" y="164" width="580" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="onAdded:" destination="rLL-mK-F44" eventType="touchUpInside" id="Ckv-9D-aOy"/>
+                                    <action selector="onTextFieldEditingChanged:" destination="rLL-mK-F44" eventType="editingChanged" id="Fwh-sT-b6f"/>
                                 </connections>
-                            </button>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fHp-5v-5Vg" firstAttribute="leading" secondItem="sLw-iq-p05" secondAttribute="leading" constant="10" id="6Tg-7v-h4U"/>
+                            <constraint firstItem="N3m-ys-zex" firstAttribute="leading" secondItem="sLw-iq-p05" secondAttribute="leading" constant="10" id="9qh-HU-3i7"/>
+                            <constraint firstItem="fHp-5v-5Vg" firstAttribute="top" secondItem="sLo-h2-pOR" secondAttribute="bottom" constant="10" id="AA0-0f-vNl"/>
+                            <constraint firstAttribute="trailing" secondItem="sLo-h2-pOR" secondAttribute="trailing" constant="10" id="B0c-RA-gUt"/>
+                            <constraint firstAttribute="trailing" secondItem="lkb-Mt-WAt" secondAttribute="trailing" constant="10" id="CXh-QO-Rqg"/>
+                            <constraint firstItem="vg1-Qh-U0f" firstAttribute="top" secondItem="PMF-t2-ibQ" secondAttribute="bottom" constant="10" id="E2Q-PH-Ffo"/>
+                            <constraint firstItem="oaT-aM-fpU" firstAttribute="top" secondItem="lkb-Mt-WAt" secondAttribute="bottom" constant="113" id="EaA-8y-t0Q"/>
+                            <constraint firstAttribute="bottom" secondItem="N3m-ys-zex" secondAttribute="bottom" constant="10" id="Exe-rY-P05"/>
+                            <constraint firstItem="Hxt-UB-NsZ" firstAttribute="top" secondItem="SyI-QP-b6L" secondAttribute="bottom" constant="10" id="HRZ-Cb-zOd"/>
+                            <constraint firstAttribute="trailing" secondItem="oaT-aM-fpU" secondAttribute="trailing" constant="16" id="I5f-cH-frf"/>
+                            <constraint firstAttribute="trailing" secondItem="N3m-ys-zex" secondAttribute="trailing" constant="10" id="LNP-Bh-DnM"/>
+                            <constraint firstAttribute="trailing" secondItem="PMF-t2-ibQ" secondAttribute="trailing" constant="10" id="MaE-eg-8ZM"/>
+                            <constraint firstItem="N3m-ys-zex" firstAttribute="top" secondItem="vg1-Qh-U0f" secondAttribute="bottom" constant="5" id="Qnt-ZW-QNn"/>
+                            <constraint firstItem="sLo-h2-pOR" firstAttribute="top" secondItem="t6h-Xp-1o0" secondAttribute="bottom" constant="5" id="U35-3e-lMm"/>
+                            <constraint firstItem="oaT-aM-fpU" firstAttribute="leading" secondItem="PMF-t2-ibQ" secondAttribute="trailing" constant="10" id="UU5-U9-PPB"/>
+                            <constraint firstItem="PMF-t2-ibQ" firstAttribute="top" secondItem="fHp-5v-5Vg" secondAttribute="bottom" constant="5" id="YHN-eE-ye4"/>
+                            <constraint firstItem="oaT-aM-fpU" firstAttribute="leading" secondItem="fHp-5v-5Vg" secondAttribute="trailing" constant="10" id="bhf-Vc-wlP"/>
+                            <constraint firstItem="oaT-aM-fpU" firstAttribute="top" secondItem="sLo-h2-pOR" secondAttribute="bottom" constant="5" id="eiR-xi-X1t"/>
+                            <constraint firstItem="oaT-aM-fpU" firstAttribute="top" secondItem="sLo-h2-pOR" secondAttribute="bottom" constant="5" id="hbN-y8-2RK"/>
+                            <constraint firstItem="lkb-Mt-WAt" firstAttribute="leading" secondItem="sLw-iq-p05" secondAttribute="leading" constant="10" id="itt-c0-Uzf"/>
+                            <constraint firstItem="PMF-t2-ibQ" firstAttribute="leading" secondItem="sLw-iq-p05" secondAttribute="leadingMargin" constant="10" id="lF0-jO-Rur"/>
+                            <constraint firstItem="t6h-Xp-1o0" firstAttribute="top" secondItem="lkb-Mt-WAt" secondAttribute="bottom" constant="10" id="lzN-n8-7d5"/>
+                            <constraint firstItem="sLo-h2-pOR" firstAttribute="leading" secondItem="sLw-iq-p05" secondAttribute="leading" constant="10" id="nFP-jZ-hXb"/>
+                            <constraint firstItem="t6h-Xp-1o0" firstAttribute="leading" secondItem="sLw-iq-p05" secondAttribute="leading" constant="10" id="oHJ-Q3-KCT"/>
+                            <constraint firstItem="vg1-Qh-U0f" firstAttribute="leading" secondItem="sLw-iq-p05" secondAttribute="leading" constant="10" id="wyA-Fa-fQu"/>
+                            <constraint firstItem="Hxt-UB-NsZ" firstAttribute="leading" secondItem="sLw-iq-p05" secondAttribute="leading" constant="10" id="xis-aS-pSv"/>
+                            <constraint firstItem="lkb-Mt-WAt" firstAttribute="top" secondItem="Hxt-UB-NsZ" secondAttribute="bottom" constant="5" id="y0O-7s-LE9"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EaA-8y-t0Q"/>
+                                <exclude reference="I5f-cH-frf"/>
+                                <exclude reference="UU5-U9-PPB"/>
+                                <exclude reference="eiR-xi-X1t"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Verse Collection" id="Zz1-aE-4X1"/>
                     <connections>
-                        <outlet property="collectionNameField" destination="lkb-Mt-WAt" id="GZf-Ky-cSX"/>
+                        <outlet property="addVerseField" destination="PMF-t2-ibQ" id="TNe-Ns-OGv"/>
+                        <outlet property="descriptionField" destination="sLo-h2-pOR" id="qNm-jO-dEM"/>
+                        <outlet property="nameField" destination="lkb-Mt-WAt" id="BC1-OQ-QMO"/>
                         <outlet property="tableView" destination="N3m-ys-zex" id="ozn-lp-QhD"/>
-                        <outlet property="verseEntry" destination="PMF-t2-ibQ" id="1cN-Ah-cJf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fdk-Aw-YEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2780" y="0.0"/>
+            <point key="canvasLocation" x="-5088" y="58"/>
         </scene>
-        <!--Memory Verse View Controller-->
+        <!--Bible Verse View Controller-->
         <scene sceneID="wv6-yF-xCo">
             <objects>
-                <viewController id="9kA-ej-749" userLabel="Memory Verse View Controller" customClass="MemoryVerseViewController" customModule="TreasuredWord" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9kA-ej-749" userLabel="Bible Verse View Controller" customClass="BibleVerseViewController" customModule="TreasuredWord" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RoM-7c-wxa"/>
+                        <viewControllerLayoutGuide type="bottom" id="bJu-gc-n3d"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pWs-Pc-rLN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John 3:16" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8xa-eb-760">
-                                <rect key="frame" x="104" y="145" width="82" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John 3:16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xa-eb-760">
+                                <rect key="frame" x="10" y="84" width="580" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8L7-yN-mzt">
-                                <rect key="frame" x="59" y="208" width="202" height="254"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8L7-yN-mzt">
+                                <rect key="frame" x="10" y="116" width="580" height="474"/>
                                 <string key="text">For God so loved the world that He gave His only begotten Son, that whoever believes in Him shall not perish but have eternal life.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bJu-gc-n3d" firstAttribute="top" secondItem="8L7-yN-mzt" secondAttribute="bottom" constant="10" id="1GT-ck-U6M"/>
+                            <constraint firstItem="8L7-yN-mzt" firstAttribute="top" secondItem="8xa-eb-760" secondAttribute="bottom" constant="10" id="4cE-9U-gih"/>
+                            <constraint firstAttribute="trailing" secondItem="8L7-yN-mzt" secondAttribute="trailing" constant="10" id="6g4-nc-WP0"/>
+                            <constraint firstAttribute="centerX" secondItem="8xa-eb-760" secondAttribute="centerX" id="8pL-0f-4b3"/>
+                            <constraint firstItem="8xa-eb-760" firstAttribute="leading" secondItem="pWs-Pc-rLN" secondAttribute="leading" constant="10" id="L7d-n8-hZ3"/>
+                            <constraint firstItem="8L7-yN-mzt" firstAttribute="leading" secondItem="pWs-Pc-rLN" secondAttribute="leading" constant="10" id="PE2-zu-Mr0"/>
+                            <constraint firstAttribute="trailing" secondItem="8xa-eb-760" secondAttribute="trailing" constant="10" id="TsT-qp-cBy"/>
+                            <constraint firstItem="8xa-eb-760" firstAttribute="top" secondItem="RoM-7c-wxa" secondAttribute="bottom" constant="20" id="gMW-bh-uIQ"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RNN-3x-WU2"/>
+                    <navigationItem key="navigationItem" title="John 3:16" id="RNN-3x-WU2"/>
                     <connections>
                         <outlet property="verseLabel" destination="8xa-eb-760" id="6Q4-PX-usk"/>
                         <outlet property="verseTextLabel" destination="8L7-yN-mzt" id="eOS-v0-U66"/>
@@ -268,19 +358,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZi-Y9-MM3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2256" y="193"/>
+            <point key="canvasLocation" x="-4230" y="203.87323943661971"/>
         </scene>
-        <!--Memory Verse Collection View Controller-->
+        <!--Bible Verse Collection View Controller-->
         <scene sceneID="IJg-dE-H6z">
             <objects>
-                <viewController id="rEA-cs-51g" userLabel="Memory Verse Collection View Controller" customClass="MemoryVerseCollectionViewController" customModule="TreasuredWord" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rEA-cs-51g" userLabel="Bible Verse Collection View Controller" customClass="BibleVerseCollectionViewController" customModule="TreasuredWord" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U7G-ml-wO9"/>
+                        <viewControllerLayoutGuide type="bottom" id="KXy-rE-UT5"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8aB-tH-ddS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="1W6-D9-6Dv">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1W6-D9-6Dv">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3eN-Sn-ICu">
                                     <size key="itemSize" width="146" height="88"/>
@@ -289,16 +382,15 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="memoryVerseCollectionViewCell" id="ofm-hc-KLX" customClass="MemoryVerseCollectionViewCell" customModule="TreasuredWord" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="bibleVerseCollectionViewCell" id="ofm-hc-KLX" customClass="BibleVerseCollectionViewCell" customModule="TreasuredWord" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="146" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John 3:16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Go5-Rd-6FV">
-                                                    <rect key="frame" x="35" y="33" width="76" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John 3:16" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Go5-Rd-6FV">
+                                                    <rect key="frame" x="37" y="10" width="73" height="68"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -307,6 +399,11 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="centerX" secondItem="Go5-Rd-6FV" secondAttribute="centerX" id="TfQ-5s-DNU"/>
+                                            <constraint firstAttribute="bottom" secondItem="Go5-Rd-6FV" secondAttribute="bottom" constant="10" id="aer-VF-WFc"/>
+                                            <constraint firstItem="Go5-Rd-6FV" firstAttribute="top" secondItem="ofm-hc-KLX" secondAttribute="top" constant="10" id="m81-NV-PED"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="verseLabel" destination="Go5-Rd-6FV" id="jax-GO-bhr"/>
                                         </connections>
@@ -319,8 +416,14 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1W6-D9-6Dv" firstAttribute="leading" secondItem="8aB-tH-ddS" secondAttribute="leading" id="GTe-r0-8st"/>
+                            <constraint firstItem="1W6-D9-6Dv" firstAttribute="top" secondItem="U7G-ml-wO9" secondAttribute="bottom" id="Nd4-pr-kNZ"/>
+                            <constraint firstAttribute="trailing" secondItem="1W6-D9-6Dv" secondAttribute="trailing" id="PDg-Dg-QPY"/>
+                            <constraint firstItem="KXy-rE-UT5" firstAttribute="top" secondItem="1W6-D9-6Dv" secondAttribute="bottom" id="xoy-if-7d8"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ET 2" id="kqS-iQ-wSX">
+                    <navigationItem key="navigationItem" title="Financial Stewardship" id="kqS-iQ-wSX">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="POl-UN-cgn">
                             <connections>
                                 <action selector="onEdit:" destination="rEA-cs-51g" id="mmL-LR-StT"/>
@@ -328,14 +431,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="memoryVerseCollectionView" destination="1W6-D9-6Dv" id="Vnc-KF-03E"/>
-                        <segue destination="rLL-mK-F44" kind="push" identifier="editVerseCollectionSegue" id="lHa-Bp-zGm"/>
-                        <segue destination="9kA-ej-749" kind="push" identifier="memoryVerseSegue" id="0Pg-Ld-hus"/>
+                        <outlet property="bibleVerseCollectionView" destination="1W6-D9-6Dv" id="s4K-yx-CfI"/>
+                        <segue destination="rLL-mK-F44" kind="show" identifier="com.treasuredword.verseCollection.editSegue" id="lHa-Bp-zGm"/>
+                        <segue destination="9kA-ej-749" kind="show" identifier="com.treasuredword.verseCollection.bibleVerseSegue" id="0Pg-Ld-hus"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3L-fC-fKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2193" y="-585"/>
+            <point key="canvasLocation" x="-4434" y="-706"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xJR-0M-Igc">
@@ -353,14 +456,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yic-KV-8Se" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3221" y="-677"/>
+            <point key="canvasLocation" x="-6039.375" y="-715.14084507042253"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="lHa-Bp-zGm"/>
     </inferredMetricsTieBreakers>
