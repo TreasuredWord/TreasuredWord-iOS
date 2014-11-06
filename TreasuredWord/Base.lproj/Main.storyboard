@@ -82,7 +82,7 @@
         <!--Home View Controller-->
         <scene sceneID="lRb-3M-vaN">
             <objects>
-                <viewController id="Bld-bX-p9m" userLabel="Home View Controller" customClass="HomeViewController" customModule="TreasuredWord" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bld-bX-p9m" userLabel="Home View Controller" customClass="HomeViewController" customModule="TreasuredWord" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U8d-MK-rJc"/>
                         <viewControllerLayoutGuide type="bottom" id="3Pa-cd-aD2"/>
@@ -452,7 +452,7 @@
         <!--Navigation Controller-->
         <scene sceneID="xJR-0M-Igc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4x5-OM-JBm" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TreasuredWordNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4x5-OM-JBm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cD9-rF-ygb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -469,6 +469,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lHa-Bp-zGm"/>
+        <segue reference="cti-J4-b9N"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,13 +13,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         let PARSE_APPLICATION_ID = NSBundle.mainBundle().objectForInfoDictionaryKey("PARSE_APPLICATION_ID") as? String
         let PARSE_CLIENT_KEY = NSBundle.mainBundle().objectForInfoDictionaryKey("PARSE_CLIENT_KEY") as? String
         Parse.setApplicationId(PARSE_APPLICATION_ID, clientKey: PARSE_CLIENT_KEY)
         PFFacebookUtils.initializeFacebook()
+
+        if PFUser.currentUser() != nil && // Check if user is cached
+            PFFacebookUtils.isLinkedWithUser(PFUser.currentUser()) { // Check if user is linked to Facebook
+                // Present the next view controller without animation
+                var storyboard = UIStoryboard(name: "Main", bundle: nil)
+                var vc = storyboard.instantiateViewControllerWithIdentifier("TreasuredWordNavigationController") as UIViewController
+                window?.rootViewController = vc
+        }
         return true
     }
 
